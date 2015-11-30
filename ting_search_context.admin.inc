@@ -268,10 +268,6 @@ function ting_search_context_admin_context_form_submit($form, &$form_state) {
 
   if (isset($form_state['ting_search_context'])) {
     $context->context_id = $form_state['ting_search_context']->context_id;
-    $context->is_new = FALSE;
-  }
-  else {
-    $context->is_new = TRUE;
   }
 
   // Save, set message and go back,
