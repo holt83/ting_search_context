@@ -86,8 +86,10 @@ function theme_ting_search_context_status(&$vars) {
 
   $output = theme('item_list', array('items' => $items));
 
+  // Show link to ding facetbrowser administration page.
   if (!empty($missing)) {
-    $output .= '<strong>' . l(t('Configure facets'), 'admin/config/ting/facets') . '</strong>';
+    $link = l(t('Configure facets'), 'admin/config/ting/facets', array('query' => drupal_get_destination()));
+    $output .= '<strong>' . $link . '</strong>';
   }
 
   return $output;
