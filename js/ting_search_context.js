@@ -111,7 +111,7 @@
         position = 'js-below-search-result';
       }
 
-      $('.pane-search-context').each(function(index) {
+      $('.pane-search-context').each(function() {
 
         if ($(this).hasClass(position)) {
           pane = $(this);
