@@ -154,26 +154,6 @@
       carousel.carousel('goToPage', 0);
     }
 
-    /**
-     * Private: Destroys the carousel and clears variables.
-     */
-    function _destroy() {
-      // Remove spinner.
-      $('.rs-carousel-inner .ajax-loader').addClass('element-hidden');
-
-      // Update content.
-      $('.rs-carousel .rs-carousel-runner').append(content);
-
-      // Show navigation arrows.
-      $('.rs-carousel-action-prev').show();
-      $('.rs-carousel-action-next').show();
-
-      // Get the carousel running.
-      carousel.carousel('refresh');
-      carousel.carousel('goToPage', 0);
-    }
-
-
 
     /**
      * Public: Reposition the carousel when the window is resized
