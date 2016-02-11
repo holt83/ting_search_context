@@ -64,9 +64,9 @@ function template_preprocess_ting_search_context_content(&$vars, $hook) {
     // Quotes inside search queries need to be escaped.
     $url = str_replace('"', '%22', $url);
 
-    // Only add Webtrends tracking params to internal links
+    // Only add Webtrends tracking params to internal links.
     if (_ting_search_context_url_is_internal($url)) {
-      if (strpos($url, '?') == FALSE) {
+      if (strpos($url, '?') === FALSE) {
         $url .= '?WT.ac=searchcontext';
       }
       else {
